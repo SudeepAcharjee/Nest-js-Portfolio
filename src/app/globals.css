@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  background-color: #0f204d;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #a1f3fcea;
+  border-radius: 50px;
+}
+
+.customScroll::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  background-color: #0f204d;
+}
+
+.customScroll::-webkit-scrollbar-thumb {
+  background-color: #a1f3fcea;
+  border-radius: 50px;
+}
+
+.right {
+  background-image: url("https://ucarecdn.com/d68722bf-c496-4634-a296-fed22b0a8573/WhatsAppImage20240814at180618_5fe23340.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 400px;
+  box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
+  animation: animate 5s ease-in-out infinite;
+  mask-image: linear-gradient(
+    to bottom,
+    rgb(5, 232, 126),
+    rgba(10, 218, 255, 0.381)
+  );
+}
+
+@media screen and (max-width: 768px) {
+  .right {
+    background-image: url("https://ucarecdn.com/d68722bf-c496-4634-a296-fed22b0a8573/WhatsAppImage20240814at180618_5fe23340.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 230px;
+    width: 230px;
+    box-shadow: 0 10px 5px 5px rgba(0, 0, 0, 0.2);
+    animation: animate 5s ease-in-out infinite;
+  }
+}
+
+@keyframes animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+.gradient-animation {
+  background: linear-gradient(to bottom right, #06b6d4, #10b981);
+  animation: gradientFade 5s infinite;
+}
+
+@keyframes gradientFade {
+  0% {
+    background: linear-gradient(to bottom right, #06b6d4, #10b981);
+  }
+  100% {
+    background: linear-gradient(to bottom right, #3b82f6, #22c55e);
+  }
+}
